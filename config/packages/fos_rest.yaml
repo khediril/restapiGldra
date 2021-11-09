@@ -2,17 +2,17 @@
 fos_rest:
     format_listener:
         rules:
-            - { path: '^/api', priorities: ['json','xml'], fallback_format: 'json' }
-#    param_fetcher_listener:  true
+            - { path: '^/api', priorities: ['json'], fallback_format: 'json' }
+
+    view:
+        view_response_listener: true
+    # …
+            #    param_fetcher_listener:  true
 #    allowed_methods_listener:  true
 #    routing_loader: true
-    view:
-        view_response_listener:  true
 #        formats:
 #            json: true
 #            xml: true
-    body_converter:
-        enabled: true
 #    exception:
 #        codes:
 #            App\Exception\MyException: 403
